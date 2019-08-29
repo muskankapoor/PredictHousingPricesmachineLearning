@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Neighboorhood: {{Neighboo}}</h1>
+	<h3>{{train}}</h3>
+
+
+	<div>
+		{% if samples < 5  %}
+		    <h1>The data is not enough for prediction because it has only {{samples}} samples in data:</h1>
+		{% else %}
+			<h1>The data is enough for prediction </h1>
+		{% endif %}
+	</div>
+	
+	<div>
+		{{dataNew | safe}}
+	</div>
+
+
+	<div>
+		<h1>r^2</h1>
+		<p>{{r_squ}} </p>
+	</div>
+
+
+	<div>
+		<p>{{x_train_An}}</p>
+		<p>{{x_val_An}}</p>
+		
+	</div>
+
+
+	<div>
+		
+		<h1>Results:</h1>
+		<h2> decisionTreeMAE: {{ decisionTreeMAE}}, decisionTreeMAPE: {{decisionTreeMAPE}}</h2>
+		<h2>randomForestMAE: {{randomForestMAE}}, randomForestMAPE : {{randomForestMAPE }}</h2>
+		<h2>lassoMAE:{{lassoMAE}}, lassoMAPE:{{lassoMAPE}}</h2>
+		<h2>ridgeMAE:{{ridgeMAE}}, ridgeMAPE:{{ridgeMAPE}}</h2>
+	</div>
+</body>
+</html>

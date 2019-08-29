@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Housing predictor</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+            <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Our Name</a>
+                      </div>
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="{{ url_for('home')}}" target="_blank">Home</a></li>
+                        <li><a href="{{ url_for('predict')}}" target="_blank">Predict</a></li> 
+                        <li><a href="{{ url_for('aboutus')}}" target="_blank">About Us</a></li>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                      </ul>
+                    </div>
+                  </nav>   
+            <div class="container">
+                    <form action="{{ url_for('answer') }}" method="post">Select features for the Home</h2>
+                      <div class="form-group">
+                        <label for="sel1">Neighborhood (select one):</label>
+                        <select class="form-control" id="sel1" name="Neighborhood">
+                          <option value="Blmngtn">Bloomington Heights</option>
+                          <option value="Blueste">Bluestem</option>
+                          <option value="BrDale">Briardale</option>
+                          <option value="BrkSide">Brookside</option>
+                          <option value="ClearCr">Clear Creek</option>
+                          <option value="CollgCr">College Creek</option>
+                          <option value="Crawfor">Crawford</option>
+                          <option value="Edwards">Edwards</option>
+                          <option value="Gilbert">Gilbert</option>
+                          <option value="IDOTRR">Iowa DOT and Rail Road</option>
+                          <option value="MeadowV">Meadow Village</option>
+                          <option value="Mitchel">Mitchell</option>
+                          <option value="Names">North Ames</option>
+                          <option value="NoRidge">Northridge</option>
+                          <option value="NPkVill">Northpark Villa</option>
+                          <option value="NridgHt">Northridge Heights</option>
+                          <option value="NWAmes">Northwest Ames</option>
+                          <option value="OldTown">Old Town</option>
+                          <option value="SWISU">South & West of Iowa State University</option>
+                          <option value="Sawyer">Sawyer</option>
+                          <option value="SawyerW">Sawyer West</option>
+                          <option value="Somerst">Somerset</option>
+                          <option value="StoneBr">Stone Brook</option>
+                          <option value="Timber">Timberland</option>
+                          <option value="Veenker">Veenker</option>
+                        </select>
+                        <br>
+                        <input type="submit" value="Submit">
+                        </div>
+                      </form>
+    </body>
+    </html>

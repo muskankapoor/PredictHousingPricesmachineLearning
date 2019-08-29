@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Home Page</title>
+</head>
+<body>
+	<h1>Home Page</h1>
+	<form action="{{ url_for('answer') }}"  method="post">
+		<p>Please select <strong>one</strong> Neighborhood</p>
+		<label for="neighb" >
+		<select name="Neighborhood" id="neighb" >
+			<option value="0" selected disabled>Choose one</option>
+			<option value='Blmngtn'> Bloomington Heights</option>
+			<option value='Blueste'> Bluestem </option>
+			<option value="BrDale"> Briardale</option>
+			<option value="BrkSide"> Brookside</option>
+			<option value="ClearCr"> Clear Creek</option>
+			<option value="CollgCr">  College Creek</option>
+			<option value="Crawfor">  Crawford</option>
+			<option value="Edwards">  Edwards</option>
+			<option value="Gilbert">  Gilbert</option>
+			<option value="IDOTRR">   Iowa DOT and Rail Road</option>
+			<option value="MeadowV">  Meadow Village</option>
+			<option value="Mitchel">  Mitchell</option>
+			<option value="Names">    North Ames</option>
+			<option value="NoRidge">  Northridge</option>
+			<option value="NPkVill">  Northpark Villa</option>
+			<option value="NridgHt">  Northridge Heights</option>
+			<option value="NWAmes">   Northwest Ames</option>
+			<option value="OldTown">  Old Town</option>
+			<option value="SWISU">   South & West of Iowa State University</option>
+			<option value="Sawyer">   Sawyer</option>
+			<option value="SawyerW">  Sawyer West</option>
+			<option value="Somerst">  Somerset</option>
+			<option value="StoneBr">  Stone Brook</option>
+			<option value="Timber">   Timberland</option>
+			<option value="Veenker">  Veenker</option>
+		</select>
+		</label>
+
+		<p>How many bedrooms you look for </p>
+		<label for="bed" >
+		<select name="bed" id="bed">
+			<option value="Any_is_Good" >Any_is_Good</option>
+
+			<option value="1"> 1</option>
+			<option value="2"> 2 </option>
+			<option value="3"> 3</option>
+			<option value="4"> 4</option>
+		</select>
+		</label>
+
+	<div>
+      <input type="submit" value="Submit" />
+    </div>
+
+    </form>
+
+    <!-- <div>
+    	<p><a href="{{ url_for('prediction')}}" target="_blank">go to Prediction page</a></p>
+    </div>
+ -->
+</body>
+</html>

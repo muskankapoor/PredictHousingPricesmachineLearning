@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Housing predictor</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <style>
+            .bg-1{
+                background-color: black;
+                color: white;
+            }
+            .navbar{
+                margin-bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+            <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Our Name</a>
+                      </div>
+                      <ul class="nav navbar-nav">
+
+                        <li class="active"><a href="{{ url_for('home')}}" target="_blank">Home</a></li>
+                        <li><a href="{{ url_for('predict')}}" target="_blank">Predict</a></li> 
+                        <li><a href="{{ url_for('aboutus')}}" target="_blank">About Us</a></li>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                  <!-- First Container -->
+        <div class="container-fluid bg-1 text-center">
+            <h1 class="margin">What We Do?</h1>
+            <img src="https://cdn.pixabay.com/photo/2019/03/13/14/21/home-4052993_960_720.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+            <h2>We can predict the price of a home in Iowa based off what you like about it</h2>
+      </div>
+      <div class ="container-fluid bg-2 text-center">
+          
+      </div>
+    </body>
+</html>
